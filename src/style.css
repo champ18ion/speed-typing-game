@@ -36,6 +36,7 @@ textarea {
   font-family: 'Press Start 2P', cursive;
   border: 3px solid black;
   width: 90%;
+  font-size: larger;
   margin: 0 auto;
   outline: none;
   height: 200px;
@@ -61,4 +62,7 @@ input{
   height: 20px;
   background: #00b800;
   padding: 10px;
+}
+input:disabled{
+  background-color: #a5a2a2;
 }
