@@ -16,7 +16,13 @@ function App() {
         setTimeRemaining,
         wordCount
     } = useWordGame(time)
-
+    
+    function calculateWpm(wordCount, timeInSeconds) {
+        const wordsPerSecond = wordCount / timeInSeconds;
+        const wordsPerMinute = wordsPerSecond * 60;
+        return Math.round(wordsPerMinute);
+    }
+      
    
     
     return (
@@ -48,7 +54,7 @@ function App() {
             >
                 Start
             </button>
-            <h1>Word count: {wordCount}</h1>
+            <h1>WPM : {calculateWpm(wordCount,time)}</h1>
         </div>
     )
 }
